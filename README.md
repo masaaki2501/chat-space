@@ -42,6 +42,5 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
-
 ## how to use GitHub Desktop
 ## how to use git revert
