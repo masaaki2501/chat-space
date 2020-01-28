@@ -43,6 +43,5 @@
 - belongs_to :group
 - belongs_to :user
 
-# README
 ## how to use GitHub Desktop
 ## how to use git revert
