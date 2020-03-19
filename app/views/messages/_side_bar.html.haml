@@ -13,8 +13,16 @@
   .side-bar__groups-list
     - current_user.groups.each do |group|
       .group
+<<<<<<< Updated upstream
         = link_to group_messages_path(group) do
           .group_name
             = group.name
           .group_message
       = group.show_last_message
+=======
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
+>>>>>>> Stashed changes

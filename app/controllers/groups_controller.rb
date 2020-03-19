@@ -18,7 +18,10 @@ class GroupsController < ApplicationController
   end
 
   def edit
+<<<<<<< Updated upstream
     @group = Group.find(params[:id])
+=======
+>>>>>>> Stashed changes
   end
 
   def update
