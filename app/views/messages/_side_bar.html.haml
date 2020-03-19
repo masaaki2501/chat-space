@@ -4,10 +4,10 @@
       古橋正明
     %ul.header__lists
       %li.list
-        = link_to '#' do
+        = link_to new_group_path do
           = icon('fa', 'edit',class: 'icon')
       %li.list
-        = link_to '#' do
+        = link_to edit_group_path(current_user) do
           = icon('fa', 'cog',class: 'icon')
   .groups
     .group
