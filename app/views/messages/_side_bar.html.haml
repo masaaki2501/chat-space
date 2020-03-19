@@ -9,11 +9,12 @@
         = link_to edit_user_path(current_user.id) do
           = icon('fas','cog')
           -# %i.fa.fa-cog.header-items__icons--cog.icon
+
   .side-bar__groups-list
     - current_user.groups.each do |group|
       .group
-        = link_to group_messages_path(group) do
-          .group_name
+        = link_to '#' do
+          .group__name
             = group.name
-          .group_message
-      = group.show_last_message
+          .group__message
+            メッセージはまだありません。
