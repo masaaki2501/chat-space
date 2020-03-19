@@ -17,6 +17,7 @@
         .right-header__button
           Edit
   .messages
+    = render @messages
 
   .form
     = form_for [@group, @message] do |f|
@@ -26,5 +27,5 @@
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'form__submit'
-      .messages
-    = render @messages
+    
+    

@@ -1,27 +1,19 @@
 .side-bar
   .header
-    %h3.header__name
+    .top-items
       古橋正明
-    %ul.header__lists
-      %li.list
+      .top-items__icons
         = link_to new_group_path do
-          = icon('fa', 'edit',class: 'icon')
-      %li.list
-        = link_to edit_group_path(current_user) do
-          = icon('fa', 'cog',class: 'icon')
-  .groups
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
+          = icon('fas','edit')
+          -# %i.fa.fa-pencil-square-o.header-items__icons--pen.icon
+        = link_to edit_user_path(current_user.id) do
+          = icon('fas','cog')
+          -# %i.fa.fa-cog.header-items__icons--cog.icon
+  .side-bar__groups-list
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group_name
+            = group.name
+          .group_message
+            = group.show_last_message

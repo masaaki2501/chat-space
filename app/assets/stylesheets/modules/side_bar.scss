@@ -3,29 +3,41 @@
   color: $white;
   width: 300px;
   .header {
+    .top-items {
+      // display: inline-block;
+      font-size: $side_header_font;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      
+      .top-items__icons {
+        a{
+          color: #ffffff;
+        }
+        .icon {
+          color: $white;
+          font-size: $side_header_font;
+        }
+      }
+    }
+
     background-color: $side_blue_dark;
     height: 100px;
     line-height: 100px;
     padding: 0 20px;
-    &__name {
-      display: inline-block;
-      font-size: $side_header_font;
-      font-weight: bold;
-    }
+    
+    // }
     &__lists {
       display: inline-block;
       float: right;
       .list {
         display: inline-block;
       }
-      .icon {
-        color: $white;
-        font-size: $side_header_font;
-      }
     }
   }
 
-  .groups {
+  .side-bar__groups-list{
     background-color: $side_blue_light;
     height: calc(100vh - 100px);
     padding: 0 20px;
